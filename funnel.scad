@@ -46,7 +46,7 @@ difference()
 	}
 	color("blue")cylinder(d1=cut_mouth_d, d2=0, h=cut_height, $fn=fine);
 	color("purple")cylinder(d=tip_d-tip_wall,  h=total_height, $fn=fine);
-    if (testing) // cutout view of walls after adjustments
-        translate([0,-mouth_d/2, 0]) cube([mouth_d,mouth_d,mouth_d]);
+	if (testing) // cutout view of walls after adjustments
+		translate([0,-mouth_d/2, 0]) cube([mouth_d,mouth_d,mouth_d]);
 }
 	
