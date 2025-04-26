@@ -1,4 +1,4 @@
-// funnel Jim Dodgen 2025 GNU General Public License v3
+// funnel.scad copyright Jim Dodgen 2025 GNU General Public License v3
 // first made for wide mouth funnel for filling jars.
 // then modified when a small 8mm funnel was needed
 // should be easy to changes  values for other sizes and styles  
