@@ -1,5 +1,5 @@
 // funnel.scad copyright Jim Dodgen 2025 GNU General Public License v3
-// first made for wide mouth funnel for filling jars.
+// first made for wide tip funnel for filling jars.
 // then modified when a small 8mm funnel was needed
 // should be easy to changes  values for other sizes and styles  
 // inside uses a fine $fn and outside very coarse to allow air to escape.
