@@ -9,7 +9,7 @@ wall = 3;
 plunger_thick = 6;
 plunger_post_height = z_height - wall;
 plunger_diameter = 20;
-plunger_clearance = 2;
+plunger_clearance = 3;
 slot_height = 3;
 slot_offset = 4;
 
