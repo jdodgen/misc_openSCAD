@@ -4,7 +4,7 @@
 // should be easy to changes  values for other sizes and styles  
 // inside uses a fine $fn and outside very coarse to allow air to escape.
 
-testing = false;  // set to true to cut to view wall adjustments
+testing = false;  // set to true to cut half off to view walls and adjustments
 
 
 ///*  large 48mm hole   
