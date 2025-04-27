@@ -1,4 +1,5 @@
-// masubi press
+// musubi press
+// copyright Jim Dodgen 2025 GNU General Public License v3
 
 $fn=200;
 x_interior_width = 100;
@@ -8,7 +9,7 @@ wall = 3;
 plunger_thick = 6;
 plunger_post_height = z_height - wall;
 plunger_diameter = 20;
-plunger_clearance = 3;
+plunger_clearance = 2;
 slot_height = 3;
 slot_offset = 4;
 
@@ -45,7 +46,7 @@ module make_plunger(offset = 0)
         cylinder(d1=flare_d, d2=0,
                     h=flare_d/1.5);
         cone_height = plunger_diameter/2;  // 45 degree slope
-        // bottom cone
+        // lower cone
         translate([0,0,plunger_post_height-slot_offset-slot_height])
             difference() // remove point
             {
