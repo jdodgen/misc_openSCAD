@@ -26,15 +26,20 @@ tab_y_offset = -4.5;
 // two styles, horz or vertical
 // tilt_cube  makes a mount for tilted cube wine racks 
 // tilt_cube(1); // 0 for top 1 for bottom mounting
-flat(1);
+//flat(1);
 
-//template();  // use to cut out tags
+template();  // use to cut out tags
 
 module template() {
+    text("LABEL", bold=true, font="OCR\\-A II:style=Regular")
     difference()
     {
-        cube([slot_height+20,slot_width+20,2], center=true);
-        cube([slot_height-1,slot_width-0.4,2], center=true);
+        border=20;
+        offset=50;
+        slot_shift=(offset-border)/2;
+        cube([slot_height+border,slot_width+offset,2], center=true);
+        translate([0,slot_shift,0])
+            cube([slot_height-1,slot_width-0.4,2], center=true);
     } 
 }
 
