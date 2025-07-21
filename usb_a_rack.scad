@@ -2,15 +2,15 @@
 
 usba_x = 12.5;
 usba_y = 5.1;
-usba_z = 12;
+usba_z = 10;
 
-spacing_x = 19;
+spacing_x = 20;
 spacing_y = 10;
 
-base_x = 60;
-base_y = 50;
-z_offset = 2;
-base_z = 4; //usba_z+z_offset;
+base_x = 62;
+base_y = 62;
+z_offset = 0;
+base_z = usba_z+z_offset;
 
 echo(base_y/spacing_x);
 
