@@ -3,6 +3,10 @@
 
 // Extrusion parameters must match reality!
 // Print with +1 shells and 3 solid layers
+// 1/2 PVC pipe insert stuff KC6OMR Jim Dodgen 2025
+//
+insert_d = 15.5;
+insert_h = 50;
 
 ThreadThick = 0.25;
 ThreadWidth = 2.0 * ThreadThick;
@@ -23,7 +27,7 @@ WallThickness=2.5;            // Desired Wall Thickness
 PostOD = 24;              // post inside metal handle
 PostLength = 25.0;
 
-PitchDia = 15.5;            // thread center diameter
+PitchDia = 15.8;            // thread center diameter
 ScrewLength = 20.0;
 
 ThreadFormOD = 2.5;         // diameter of thread form
@@ -75,6 +79,7 @@ module PolyCyl(Dia,Height,ForceSides=0) {                       // based on noph
 
 //-------------------
 // Build it...
+
 difference()
 {
     union() {
@@ -83,8 +88,15 @@ difference()
             Cyl_Thread(ThreadPitch,(ScrewLength - ThreadFormOD/2),PitchDia,ThreadFormOD/2);
         cylinder(d=14.5, h=40);
         translate([0,0,ScrewLength*.7])
-        cylinder(d2=22, d1=0, h=11);
+        {
+            cylinder(d2=22, d1=0, h=11);
+            cylinder(d=insert_d, h=insert_h);
+        }
+        translate([0,0,ScrewLength*.7+insert_h])
+            cylinder(d2=0, d1=insert_d, h=30);
     }
+    translate([0,0,ScrewLength*.7+insert_h+4])
+            cylinder(d=insert_d, h=30);
 
 translate([0,0,-10]) cylinder(d=20, h=10);
 }
