@@ -3,7 +3,7 @@
 // base size can be calculated by how many you want in a set
 $fn=240;
 post_dia = 27;
-post_hight = 80 - post_dia/2;
+post_hight = 130 - post_dia/2;
 base_thickness = 6;
 base_min = 56;
 set_width = 143;
